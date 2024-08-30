@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- ques-1 -->
+    <h1>Signup Form</h1>
+    <form id="signupForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="formData" style="display: none;">
+        <h2>Submitted Data</h2>
+        <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+    </div>
+    
+    <!-- ques-2 -->
+    
+    <div class="content-area">
+        <h2>Item Details</h2>
+        <div class="summary" id="summary">
+            <p>This is a brief summary of the item. It provides an overview of the item but does not include all the details.</p>
+        </div>
+        <div class="full-details" id="fullDetails" style="display: none;">
+            <p>This is the full detail of the item. It includes all the information about the item, such as its features, specifications, and any additional notes that are relevant to understanding the item completely.</p>
+        </div>
+        <button id="toggleButton">Read More</button>
+    </div>
+
+    <!-- ques-3 -->
+    <!-- Form for adding student details -->
+    <h2>Add Student</h2>
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" required>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <!-- Hidden form for editing student details -->
+    <div id="editFormContainer" style="display: none;">
+        <h2>Edit Student</h2>
+        <form id="editForm">
+            <input type="hidden" id="editIndex">
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" required>
+            <label for="editAge">Age:</label>
+            <input type="number" id="editAge" required>
+            <label for="editGrade">Grade:</label>
+            <input type="text" id="editGrade" required>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancelEdit">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Table for displaying student records -->
+    <h2>Student Records</h2>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script src="./index.js"></script>
+</body>
+</html>
